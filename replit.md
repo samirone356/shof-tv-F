@@ -13,3 +13,9 @@ The Replit workflow uses port `5000` for the Angular preview.
 All project images live in `public/assets/img/` and are served at `/assets/img/<filename>`.
 Use that public URL convention in Angular templates and component data so images work in both
 the development preview and production builds.
+
+## Architecture
+
+The app uses standalone Angular components with lazy-loaded feature route groups.
+See `docs/ARCHITECTURE.md` for folder ownership, dependency rules, and the
+recommended pattern for adding new features.

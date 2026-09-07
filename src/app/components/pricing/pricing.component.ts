@@ -1,16 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-interface PricingPlan {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  cta: string;
-}
+import { HOME_PRICING_PLANS } from '../../features/home/data/home.data';
+import { PricingPlan } from '../../features/home/models/home.models';
 
 @Component({
   selector: 'app-pricing',
@@ -132,54 +124,5 @@ export class PricingComponent {
     this.selectedPlan = planName;
   }
 
-  plans: PricingPlan[] = [
-    {
-      name: 'Basic',
-      price: '$4.99',
-      period: 'month',
-      description: 'Great for casual viewers',
-      features: [
-        '50+ Live Channels',
-        'SD & HD Quality',
-        '1 Device at a time',
-        '7-day catch-up',
-        'Basic parental controls',
-      ],
-      popular: false,
-      cta: 'Start Free Trial',
-    },
-    {
-      name: 'Premium',
-      price: '$9.99',
-      period: 'month',
-      description: 'Best for families and binge-watchers',
-      features: [
-        '200+ Live Channels',
-        '4K Ultra HD + HDR',
-        'Up to 4 Devices',
-        '30-day catch-up',
-        'Advanced parental controls',
-        'Offline downloads',
-        'No ads on on-demand',
-      ],
-      popular: true,
-      cta: 'Start Free Trial',
-    },
-    {
-      name: 'Sports+',
-      price: '$14.99',
-      period: 'month',
-      description: 'For the ultimate sports fan',
-      features: [
-        'All Premium features',
-        'Exclusive sports channels',
-        'Multi-cam view',
-        'Live stats overlay',
-        'Match highlights & replays',
-        'Up to 6 Devices',
-      ],
-      popular: false,
-      cta: 'Start Free Trial',
-    },
-  ];
+  plans: readonly PricingPlan[] = HOME_PRICING_PLANS;
 }

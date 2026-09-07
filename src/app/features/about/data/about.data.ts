@@ -1,13 +1,4 @@
-export interface TimelineEvent {
-  year: string;
-  title: string;
-  description: string;
-}
-
-export interface TeamMember {
-  name: string;
-  role: string;
-}
+import { TeamMember, TimelineEvent } from '../models/about.models';
 
 export const ABOUT_TIMELINE: readonly TimelineEvent[] = [
   { year: '2018', title: 'The Inception', description: 'A group of cinephiles realized that finding classic and indie films was too hard. The idea for ShofTV was born in a small garage.' },

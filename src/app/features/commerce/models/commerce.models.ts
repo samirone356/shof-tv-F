@@ -2,9 +2,11 @@ export interface ConcessionItem {
   name: string;
   price: number;
   description: string;
-  category: string;
+  category: ConcessionCategory;
   image: string;
 }
+
+export type ConcessionCategory = 'popcorn' | 'drinks' | 'snacks' | 'combos';
 
 export interface CartItem {
   item: ConcessionItem;

@@ -92,7 +92,7 @@ interface FaqItem {
         <div class="mt-12 text-center">
           <p class="text-muted-foreground text-sm">
             Still have questions?
-            <a routerLink="/contact" class="text-primary hover:underline font-medium"
+            <a routerLink="/support/contact" class="text-primary hover:underline font-medium"
               >Contact our support team</a
             >
           </p>

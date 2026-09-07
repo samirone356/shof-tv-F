@@ -2,6 +2,8 @@ import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PageShellComponent } from '../../core/layout/page-shell.component';
+import { GIFT_CARD_AMOUNTS, GIFT_CARD_TYPES } from '../../features/commerce/data/commerce.data';
+import { GiftCardAmount, GiftCardType } from '../../features/commerce/models/commerce.models';
 
 @Component({
   selector: 'app-gift-cards',
@@ -10,27 +12,8 @@ import { PageShellComponent } from '../../core/layout/page-shell.component';
   templateUrl: './gift-cards.component.html',
 })
 export class GiftCardsComponent {
-  amounts = [
-    { value: 25, label: '$25', popular: false },
-    { value: 50, label: '$50', popular: true },
-    { value: 100, label: '$100', popular: false },
-    { value: 0, label: 'Custom', sub: 'Amount', popular: false },
-  ];
-
-  cardTypes = [
-    {
-      value: 'digital',
-      label: 'Digital Card',
-      description: 'Delivered instantly via email',
-      icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-    },
-    {
-      value: 'physical',
-      label: 'Physical Card',
-      description: 'Mailed in premium packaging',
-      icon: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
-    },
-  ];
+  amounts: readonly GiftCardAmount[] = GIFT_CARD_AMOUNTS;
+  cardTypes: readonly GiftCardType[] = GIFT_CARD_TYPES;
 
   selectedAmount = signal(50);
   selectedCardType = signal('digital');

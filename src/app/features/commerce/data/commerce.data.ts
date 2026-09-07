@@ -1,4 +1,4 @@
-import { ConcessionItem, GiftCardAmount, GiftCardType } from '../models/commerce.models';
+import { CartItem, ConcessionItem, GiftCardAmount, GiftCardType } from '../models/commerce.models';
 
 export const CONCESSION_TABS = [
   { key: 'popcorn', label: 'Popcorn', icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4' },
@@ -19,6 +19,11 @@ export const CONCESSION_ITEMS: readonly ConcessionItem[] = [
   { name: 'Candy Bar', price: 4, description: 'Choose from M&Ms, Snickers, or Reeses.', category: 'snacks', image: '/assets/img/shoftv-poster-rain.jpg' },
   { name: 'Movie Night Combo', price: 15, description: 'Large popcorn + 2 large sodas + candy.', category: 'combos', image: '/assets/img/shoftv-cinema.jpg' },
   { name: 'Date Night Combo', price: 22, description: '2 large popcorns + 2 drinks + nachos.', category: 'combos', image: '/assets/img/shoftv-hero.jpg' },
+];
+
+export const INITIAL_CART_ITEMS: readonly CartItem[] = [
+  { item: CONCESSION_ITEMS[0], qty: 1 },
+  { item: CONCESSION_ITEMS[4], qty: 1 },
 ];
 
 export const GIFT_CARD_AMOUNTS: readonly GiftCardAmount[] = [
