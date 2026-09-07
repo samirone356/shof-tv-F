@@ -9,15 +9,15 @@ export const COMMERCE_ROUTES: Routes = [
   {
     path: 'gift-cards',
     loadComponent: () =>
-      import('../../pages/gift-cards/gift-cards.component').then(
-        (module) => module.GiftCardsComponent,
+      import('./pages/gift-cards-page.component').then(
+        (module) => module.GiftCardsPageComponent,
       ),
   },
   {
     path: 'concessions',
     loadComponent: () =>
-      import('../../pages/concessions/concessions.component').then(
-        (module) => module.ConcessionsComponent,
+      import('./pages/concessions-page.component').then(
+        (module) => module.ConcessionsPageComponent,
       ),
   },
 ];

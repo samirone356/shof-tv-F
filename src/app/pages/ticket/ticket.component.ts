@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PageShellComponent } from '../../core/layout/page-shell.component';
+import { TICKET_CONFIRMATION } from '../../features/tickets/data/ticket.data';
+import { TicketConfirmation } from '../../features/tickets/models/ticket.models';
 
 @Component({
   selector: 'app-ticket',
@@ -100,14 +102,7 @@ import { PageShellComponent } from '../../core/layout/page-shell.component';
   `,
 })
 export class TicketComponent {
-  ticket = {
-    movie: 'Dune: Part Two',
-    format: 'IMAX 70mm Experience',
-    theater: 'AMC Lincoln Square 13',
-    dateTime: 'Oct 24 \u2022 7:30 PM',
-    seat: 'Row H, Seat 12',
-    orderNumber: '#STV-99281A',
-  };
+  ticket: TicketConfirmation = TICKET_CONFIRMATION;
 
   printTicket() {
     window.print();

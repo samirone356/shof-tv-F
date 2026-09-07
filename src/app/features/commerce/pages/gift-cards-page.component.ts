@@ -1,0 +1,1 @@
+export { GiftCardsComponent as GiftCardsPageComponent } from '../../../pages/gift-cards/gift-cards.component';

@@ -1,0 +1,1 @@
+export { TicketComponent as TicketPageComponent } from '../../../pages/ticket/ticket.component';

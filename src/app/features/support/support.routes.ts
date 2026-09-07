@@ -9,11 +9,11 @@ export const SUPPORT_ROUTES: Routes = [
   {
     path: 'help',
     loadComponent: () =>
-      import('../../pages/help/help.component').then((module) => module.HelpComponent),
+      import('./pages/help-page.component').then((module) => module.HelpPageComponent),
   },
   {
     path: 'contact',
     loadComponent: () =>
-      import('../../pages/contact/contact.component').then((module) => module.ContactComponent),
+      import('./pages/contact-page.component').then((module) => module.ContactPageComponent),
   },
 ];

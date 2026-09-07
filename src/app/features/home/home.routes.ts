@@ -4,6 +4,6 @@ export const HOME_ROUTES: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('../../pages/home/home.component').then((module) => module.HomeComponent),
+      import('./pages/home-page.component').then((module) => module.HomePageComponent),
   },
 ];

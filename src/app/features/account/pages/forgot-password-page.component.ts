@@ -1,0 +1,1 @@
+export { ForgotPasswordComponent as ForgotPasswordPageComponent } from '../../../pages/forgot-password/forgot-password.component';

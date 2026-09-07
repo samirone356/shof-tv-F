@@ -1,0 +1,1 @@
+export { AboutComponent as AboutPageComponent } from '../../../pages/about/about.component';

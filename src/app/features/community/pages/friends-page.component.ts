@@ -1,0 +1,1 @@
+export { FriendsComponent as FriendsPageComponent } from '../../../pages/friends/friends.component';

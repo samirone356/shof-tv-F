@@ -1,0 +1,1 @@
+export { HelpComponent as HelpPageComponent } from '../../../pages/help/help.component';

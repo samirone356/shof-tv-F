@@ -4,6 +4,6 @@ export const TICKETS_ROUTES: Routes = [
   {
     path: 'confirmation',
     loadComponent: () =>
-      import('../../pages/ticket/ticket.component').then((module) => module.TicketComponent),
+      import('./pages/ticket-page.component').then((module) => module.TicketPageComponent),
   },
 ];

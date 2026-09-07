@@ -1,0 +1,1 @@
+export { ConcessionsComponent as ConcessionsPageComponent } from '../../../pages/concessions/concessions.component';

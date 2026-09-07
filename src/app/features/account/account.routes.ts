@@ -4,8 +4,8 @@ export const ACCOUNT_ROUTES: Routes = [
   {
     path: 'forgot-password',
     loadComponent: () =>
-      import('../../pages/forgot-password/forgot-password.component').then(
-        (module) => module.ForgotPasswordComponent,
+      import('./pages/forgot-password-page.component').then(
+        (module) => module.ForgotPasswordPageComponent,
       ),
   },
 ];
